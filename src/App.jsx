@@ -1,8 +1,11 @@
+import DateTime from "./components/DateTime";
+import { appWindow } from "@tauri-apps/api/window";
+
 function App() {
   return (
-    <>
-      <h1>React App</h1>
-    </>
+    <div className="flex flex-col h-full w-full items-center justify-center m-0 p-0">
+      <DateTime />
+    </div>
   );
 }
 

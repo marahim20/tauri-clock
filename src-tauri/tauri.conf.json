@@ -12,6 +12,23 @@
   "tauri": {
     "allowlist": {
       "all": false,
+      "window": {
+        "setResizable": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setCursorIcon": true,
+        "close": true,
+        "setClosable": true,
+        "startDragging": true,
+        "setDecorations": true,
+        "setTitle": true,
+        "setAlwaysOnTop": true,
+        "setMinimizable": true,
+        "setIgnoreCursorEvents": true,
+        "setCursorVisible": true,
+        "setPosition": true
+      },
       "shell": {
         "all": false,
         "open": true
@@ -37,8 +54,10 @@
         "fullscreen": false,
         "resizable": true,
         "title": "tauri-clock",
-        "width": 800,
-        "height": 600
+        "width": 150,
+        "height": 50,
+        "transparent": true,
+        "decorations": false
       }
     ]
   }
