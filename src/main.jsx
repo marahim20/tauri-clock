@@ -9,6 +9,7 @@ appWindow.setAlwaysOnTop(true);
 appWindow.setResizable(false);
 appWindow.setClosable(false);
 appWindow.setMinimizable(false);
+appWindow.setSkipTaskbar(true);
 
 const setWindowPosition = async () => {
   const screenWidth = window.screen.width;
@@ -22,13 +23,11 @@ const setWindowPosition = async () => {
 
 setWindowPosition();
 
-appWindow.setSkipTaskbar(true);
-
 const handleMouseEnter = () => {
   appWindow.hide();
   setTimeout(() => {
     appWindow.show();
-  }, 2000);
+  }, 5000);
 };
 
 ReactDOM.createRoot(document.getElementById("root")).render(
