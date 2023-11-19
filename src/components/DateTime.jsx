@@ -8,12 +8,15 @@ export default function DateTime() {
       clearInterval(timer);
     };
   });
+  const hours1 = date.getHours();
   const hours = (date.getHours() % 12).toString().padStart(2, "0");
   const minutes = date.getMinutes().toString().padStart(2, "0");
-  const ampm = hours >= 12 ? "pm" : "am";
+  const ampm = hours1 >= 12 ? "pm" : "am";
   return (
-    <p className="text-lg font-semibold font-serif w-fit h-fit p-2 px-4 rounded-xl text-white">
-      {hours} : {minutes} {ampm}
-    </p>
+    <>
+      <p className="text-lg font-serif font-bold w-fit h-fit p-2 px-4 rounded-xl text-white">
+        {hours} : {minutes} {ampm}
+      </p>
+    </>
   );
 }
