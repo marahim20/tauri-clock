@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import DateTime from "./components/DateTime";
-import { appWindow } from "@tauri-apps/api/window";
 
 function App() {
   return (

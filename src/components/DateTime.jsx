@@ -14,7 +14,7 @@ export default function DateTime() {
   const ampm = hours1 >= 12 ? "pm" : "am";
   return (
     <>
-      <p className="text-lg font-serif font-bold w-fit h-fit p-2 px-4 rounded-xl text-white">
+      <p className="text-lg font-serif font-bold w-fit h-fit p-2 px-4 rounded-xl text-gray-300">
         {hours} : {minutes} {ampm}
       </p>
     </>

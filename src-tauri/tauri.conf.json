@@ -27,7 +27,10 @@
         "setMinimizable": true,
         "setIgnoreCursorEvents": true,
         "setCursorVisible": true,
-        "setPosition": true
+        "setPosition": true,
+        "setSkipTaskbar": true,
+        "hide": true,
+        "show": true
       },
       "shell": {
         "all": false,
@@ -37,7 +40,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "com.tauri-clock.dev",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",

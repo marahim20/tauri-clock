@@ -9,17 +9,32 @@ appWindow.setAlwaysOnTop(true);
 appWindow.setResizable(false);
 appWindow.setClosable(false);
 appWindow.setMinimizable(false);
-appWindow.setIgnoreCursorEvents(true);
-const screenWidth = window.screen.width;
-const screenHeight = window.screen.height;
-const windowWidth = 150; // Replace with your window width
-const windowHeight = 45; // Replace with your window height
-const positionX = screenWidth - windowWidth;
-const positionY = screenHeight - windowHeight - 25;
-appWindow.setPosition(new LogicalPosition(positionX, positionY));
+
+const setWindowPosition = async () => {
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+  const { width: windowWidth, height: windowHeight } =
+    await appWindow.innerSize();
+  const positionX = screenWidth - windowWidth + 50;
+  const positionY = screenHeight - windowHeight;
+  appWindow.setPosition(new LogicalPosition(positionX, positionY));
+};
+
+setWindowPosition();
+
+appWindow.setSkipTaskbar(false);
+
+const handleMouseEnter = () => {
+  appWindow.hide();
+  setTimeout(() => {
+    appWindow.show();
+  }, 2000);
+};
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <div className="w-full h-full" onMouseEnter={handleMouseEnter}>
+      <App />
+    </div>
   </React.StrictMode>
 );
