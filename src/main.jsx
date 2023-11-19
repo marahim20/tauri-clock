@@ -22,7 +22,7 @@ const setWindowPosition = async () => {
 
 setWindowPosition();
 
-appWindow.setSkipTaskbar(false);
+appWindow.setSkipTaskbar(true);
 
 const handleMouseEnter = () => {
   appWindow.hide();
